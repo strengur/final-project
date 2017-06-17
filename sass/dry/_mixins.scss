@@ -1,0 +1,36 @@
+// Media queries mixins
+@mixin mobile-landscape-nrw {
+  @media screen and (min-width: $brk-mobile-landscape-nrw) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape-mid {
+  @media screen and (min-width: $brk-mobile-landscape-mid) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape-norm {
+  @media screen and (min-width: $brk-mobile-landscape-norm) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape-wide {
+  @media screen and (min-width: $brk-mobile-landscape-wide) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (min-width: $brk-tablets) {
+    @content;
+  }
+}
+
+@mixin displays {
+  @media screen and (min-width: $brk-displays){
+    @content;
+  }
+}
