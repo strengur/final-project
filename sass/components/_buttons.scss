@@ -1,0 +1,33 @@
+button {
+  color: #fff;
+}
+
+.buttons {
+  padding-top: 40px;
+}
+
+button,
+.buttons a {
+  padding: 10px;
+  border-radius: 7px;
+  margin: 15px auto;
+}
+
+button {
+  background: #008dff;
+  border: 0;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+.buttons.arsenal a {
+  background: #ff6000;
+  color: #00202a;
+}
+
+.buttons.sense a {
+  background: #00ffe0;
+  color: #1d0029;
+}

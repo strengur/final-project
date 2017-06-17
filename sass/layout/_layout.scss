@@ -2,13 +2,30 @@ body {
   //display: inline-flex;
 }
 
+.profile-image {
+  width: 130px;
+  margin: 0 auto;
+}
+
+.profile-image img {
+  width: 130px;
+  border-radius: 50%;
+}
+
 .s-base {
   position: relative;
   min-height: calc(100vh);
   width: 100vw;
-  border: 1px solid;
   padding: 10px;
   background: #e3e3e3;
+}
+section#s1,
+section#s2,
+section#s3,
+section#s4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 #s1 {
@@ -20,6 +37,69 @@ body {
   color: #fff;
 }
 
-.headlines h3 {
-  text-transform: uppercase;
+#s1 h1 span {
+  color: #ffe000;
+}
+
+#s2 {
+  background: #ffe000;
+  color: #00202a;
+}
+
+#s2 h1 {
+  color: #00202a;
+}
+
+#s2 h1 span {
+  color: #ff6000;
+}
+
+#s3 {
+  background: #ff6000;
+  color: #1d0029;
+}
+
+#s3 h1 {
+  color: #1d0029;
+}
+
+#s3 h1 span {
+  color: #00ffe0;
+}
+
+#s4 {
+  background: #00ffe0;
+  color: #000036;
+}
+
+#s4 h1 {
+  color: #000036;
+}
+
+#s4 h1 span {
+  color: #008dff;
+}
+
+#s1 h1 {
+  margin: 15px 0px 0px;
+}
+
+#s2 h1,
+#s3 h1,
+#s4 h1 {
+  margin: 0px;
+}
+
+#s1 h3,
+#s2 h3,
+#s3 h3,
+#s4 h3 {
+  margin-top: 0px;
+}
+
+.center-text h1,
+.center-text h3,
+.center-text {
+  width: 100%;
+  text-align: center;
 }
