@@ -150,4 +150,64 @@ button {
   background: #00ffe0;
   color: #1d0029; }
 
+fieldset {
+  border: 2px solid #008dff;
+  border-radius: 7px;
+  background-color: #cae8ff;
+  width: 100%;
+  margin: 0 auto; }
+
+legend {
+  padding: 10px; }
+
+label {
+  margin: 0px;
+  text-align: left; }
+
+input, textarea {
+  margin: 0; }
+
+.flex-form-container {
+  text-align: left;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 310px;
+  padding: 30px 0px; }
+
+.flex-form-container input,
+.flex-form-container textarea {
+  border-radius: 3px;
+  border: none;
+  margin: 10px 0px 10px 0px;
+  padding: 0px 5px; }
+
+.flex-form-container label {
+  flex: 0 100px; }
+
+.flex-form-container input {
+  flex: 0 336px;
+  height: 2.5em; }
+
+.flex-form-container textarea {
+  flex: 0 336px;
+  height: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+span#email-format {
+  width: 100%;
+  text-align: right;
+  font-size: 0.75em; }
+
+@media screen and (min-width: 480px) {
+  .flex-form-container {
+    max-width: 436px; } }
+@media screen and (min-width: 767px) {
+  .flex-form-container label {
+    flex: 0 120px; }
+
+  .flex-form-container {
+    max-width: 456px; } }
+
 /*# sourceMappingURL=style.css.map */
