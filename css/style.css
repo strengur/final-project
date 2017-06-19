@@ -58,7 +58,16 @@ small, .font_small {
 section#s1,
 section#s2,
 section#s3,
-section#s4 {
+section#s4
+ {
+  display: flex; }
+
+.s1-content,
+.s2-content,
+.s3-content,
+.s4-content {
+  max-width: 37em;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-content: center; }
