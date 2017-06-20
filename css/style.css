@@ -60,7 +60,8 @@ section#s2,
 section#s3,
 section#s4
  {
-  display: flex; }
+  display: flex;
+  padding: 100px 0px; }
 
 .s1-content,
 .s2-content,
@@ -218,5 +219,26 @@ span#email-format {
 
   .flex-form-container {
     max-width: 456px; } }
+.badge-listing {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.badge-listing ul {
+  list-style: none;
+  padding-left: 0px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.badge-listing ul li {
+  flex: 0 120px;
+  margin: 10px; }
+
+.badge-listing ul li img {
+  width: 70px; }
+
+.badge-listing p {
+  margin-top: 0px;
+  font-size: 0.75em; }
 
 /*# sourceMappingURL=style.css.map */
