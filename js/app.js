@@ -1,5 +1,6 @@
-var s2Content = document.getElementById('s2-content');
-var buttonArsenal = document.getElementById('button-arsenal');
+
+var $sectionOne = document.getElementById('s1');
+var $buttonArsenal = document.getElementById('button-arsenal');
 
 function getBadges($arsenalButtonHTML) {
   var treehouseAPI = 'https://teamtreehouse.com/steingrimurstefansson.json?';
@@ -34,7 +35,7 @@ function getBadges($arsenalButtonHTML) {
   $.getJSON(treehouseAPI, treehouseOptions, displayBadges);
 }
 var $arsenalButtonStatus = 0;
-buttonArsenal.addEventListener('click', function(e) {
+$buttonArsenal.addEventListener('click', function(e) {
   e.preventDefault();
   var $arsenalButtonHTML = $(this);
 
@@ -45,5 +46,6 @@ buttonArsenal.addEventListener('click', function(e) {
     $arsenalButtonStatus = 0;
     $('.badge-listing').html('');
     $arsenalButtonHTML.html('<a href="">know more</a>');
+    window.scrollTo(0, $sectionOne.clientHeight);
   }
 });
