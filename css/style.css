@@ -41,11 +41,10 @@ small, .font_small {
   body {
     font-size: 16px; } }
 .profile-image {
-  width: 130px;
   margin: 0 auto; }
 
 .profile-image img {
-  width: 130px;
+  width: 100px;
   border-radius: 50%; }
 
 .s-base {
@@ -133,6 +132,20 @@ section#s4
   width: 100%;
   text-align: center; }
 
+.social-icons a {
+  text-decoration: none; }
+
+.social-icons svg {
+  width: 40px;
+  margin-left: 6px;
+  margin-right: 6px; }
+
+@media screen and (min-width: 767px) {
+  .profile-image img {
+    width: 130px; }
+
+  .social-icons svg {
+    width: 60px; } }
 button {
   color: #fff; }
 
