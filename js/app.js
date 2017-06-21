@@ -1,12 +1,13 @@
 
 var $sectionOne = document.getElementById('s1');
+var $sectionFour = document.getElementById('s4-content');
 var $buttonArsenal = document.getElementById('button-arsenal');
+var $buttonSense = document.getElementById('button-sense');
 
+// BEGIN: arsenal section interactivity when button 'know more' is clicked.
 function getBadges($arsenalButtonHTML) {
   var treehouseAPI = 'https://teamtreehouse.com/steingrimurstefansson.json?';
-  var treehouseOptions = {
-
-  }
+  var treehouseOptions = {}
 
   var $data;
   function displayBadges(data) {
@@ -49,3 +50,26 @@ $buttonArsenal.addEventListener('click', function(e) {
     window.scrollTo(0, $sectionOne.clientHeight);
   }
 });
+
+// END: arsenal section interactivity when button 'know more' is clicked.
+
+// BEGIN: touch section interactivity when button 'keep in touch' is clicked.
+
+
+
+$buttonSense.addEventListener('click', function() {
+  $('#s4-content').fadeOut(700, function() {
+    var $senseGreeting = '<div class="sense-message">';
+    $senseGreeting += '<h3>hi, steingrímur</h3>';
+    $senseGreeting += '<p>thank you so much for contacting me!<br>i will do my very best to reply to your inquiry as sharply as i can, no later than next business day.</p>';
+    $senseGreeting += '<p>have a great day!</p>';
+    $senseGreeting += '<p><i>sincerely,<br>steingrimur</i></p>';
+    $senseGreeting += '<div class="buttons close-touch center-text">';
+    $senseGreeting += '<a href="#">close</a>';
+    $senseGreeting += '</div>';
+    $senseGreeting += '</div>';
+    $('#s4-content').html($senseGreeting).delay(500).fadeIn(500);
+  });
+});
+
+// END: touch section interactivity when button 'keep in touch' is clicked.

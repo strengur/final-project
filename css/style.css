@@ -37,6 +37,9 @@ h4 {
 small, .font_small {
   font-size: 0.707em; }
 
+button:hover {
+  cursor: pointer; }
+
 @media screen and (min-width: 767px) {
   body {
     font-size: 16px; } }
@@ -65,7 +68,8 @@ section#s4
 .s1-content,
 .s2-content,
 .s3-content,
-.s4-content {
+.s4-content,
+.sense-message {
   max-width: 37em;
   margin: 0 auto;
   display: flex;
@@ -160,13 +164,22 @@ section#s4
 svg {
   animation: turn 1.5s ease-out backwards; }
 
+.sense-message h3, .sense-message p {
+  text-align: left; }
+
 @media screen and (min-width: 767px) {
   .profile-image img {
     width: 130px; }
 
   .social-icons svg {
     width: 60px; } }
-button {
+button,
+.buttons.close-touch a {
+  color: #fff;
+  background: #008dff;
+  border: 0; }
+
+.buttons.close-touch a:visited {
   color: #fff; }
 
 .buttons {
@@ -177,10 +190,6 @@ button,
   padding: 10px;
   border-radius: 7px;
   margin: 15px auto; }
-
-button {
-  background: #008dff;
-  border: 0; }
 
 .buttons a {
   text-decoration: none; }
