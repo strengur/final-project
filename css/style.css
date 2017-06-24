@@ -172,7 +172,7 @@ section#s4
     transform: rotate(355deg) scale(0.9); }
   100% {
     transform: rotate(360deg) scale(1); } }
-svg {
+.social-icons svg {
   animation: turn 1.5s ease-out backwards; }
 
 .sense-message h3, .sense-message p {
@@ -246,26 +246,54 @@ button,
   padding-left: 0px; }
 
 .projects-overview a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #444; }
 
 .projects-overview > ul > li {
-  flex: 1 300px;
-  background: wheat;
-  margin: 5px; }
+  flex: 1 288px;
+  background: #ffe7d8;
+  margin: 5px;
+  padding: 5px; }
 
 .projects-overview > ul {
   display: inline-flex;
   flex-wrap: wrap; }
 
 .projects-overview {
-  background: #888;
   /* width: 100%; */
   top: 0;
   margin: 10px;
-  border: 1px solid;
-  /* display: flex; */
-  position: absolute; }
+  /* display: flex; */ }
 
+.project {
+  max-width: 288px;
+  margin: 0 auto;
+  padding-bottom: 20px; }
+
+.project img {
+  max-width: 278px; }
+
+.project h5 {
+  font-size: 1.25em;
+  margin-bottom: 7px; }
+
+ul.programming-icons {
+  display: inline-flex; }
+
+.projects-overview ul {
+  list-style: none;
+  padding-left: 0px; }
+
+ul.programming-icons svg {
+  width: 40px;
+  height: 42px;
+  margin: 7px; }
+
+@media screen and (min-width: 767px) {
+  ul.programming-icons svg {
+    width: 50px;
+    height: 52px;
+    margin: 8px; } }
 fieldset {
   border: 2px solid #008dff;
   border-radius: 7px;

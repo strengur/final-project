@@ -5,12 +5,14 @@
 
 .projects-overview a {
   text-decoration: none;
+  color: #444;
 }
 
 .projects-overview>ul>li {
-  flex: 1 300px;
-  background: wheat;
+  flex: 1 288px;
+  background: #ffe7d8;
   margin: 5px;
+  padding: 5px;
 }
 
 .projects-overview>ul {
@@ -19,11 +21,49 @@
 }
 
 .projects-overview {
-  background: #888;
+  //background: #888;
   /* width: 100%; */
   top: 0;
   margin: 10px;
-  border: 1px solid;
+  //border: 1px solid;
   /* display: flex; */
-  position: absolute;
+  // position: absolute;
+}
+
+.project {
+  max-width: 288px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.project img {
+  max-width: 278px;
+}
+
+.project h5 {
+  font-size: 1.25em;
+  margin-bottom: 7px;
+}
+
+ul.programming-icons {
+  display: inline-flex;
+}
+
+.projects-overview ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+ul.programming-icons svg {
+  width: 40px;
+  height: 42px;
+  margin: 7px;
+}
+
+@include tablets {
+  ul.programming-icons svg {
+    width: 50px;
+    height: 52px;
+    margin: 8px;
+  }
 }
