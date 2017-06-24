@@ -73,8 +73,16 @@ section#s4
   max-width: 37em;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.s1-content,
+.s2-content,
+.s3-content,
+.s4-content {
   align-content: center; }
+
+.sense-message {
+  align-self: center; }
 
 #s1 {
   background: #008dff;
@@ -115,6 +123,9 @@ section#s4
 
 #s4 h1 span {
   color: #008dff; }
+
+.s4-content {
+  margin: 0 20px; }
 
 #s1 h1 {
   margin: 15px 0px 0px; }
@@ -167,6 +178,12 @@ svg {
 .sense-message h3, .sense-message p {
   text-align: left; }
 
+.s3-content {
+  display: none; }
+
+@media screen and (min-width: 521px) {
+  .s4-content {
+    margin: auto; } }
 @media screen and (min-width: 767px) {
   .profile-image img {
     width: 130px; }
@@ -202,6 +219,53 @@ button,
   background: #00ffe0;
   color: #1d0029; }
 
+.badge-listing {
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.badge-listing ul {
+  list-style: none;
+  padding-left: 0px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.badge-listing ul li {
+  flex: 0 120px;
+  margin: 10px; }
+
+.badge-listing ul li img {
+  width: 70px; }
+
+.badge-listing p {
+  margin-top: 0px;
+  font-size: 0.75em; }
+
+.projects-overview ul {
+  list-style: none;
+  padding-left: 0px; }
+
+.projects-overview a {
+  text-decoration: none; }
+
+.projects-overview > ul > li {
+  flex: 1 300px;
+  background: wheat;
+  margin: 5px; }
+
+.projects-overview > ul {
+  display: inline-flex;
+  flex-wrap: wrap; }
+
+.projects-overview {
+  background: #888;
+  /* width: 100%; */
+  top: 0;
+  margin: 10px;
+  border: 1px solid;
+  /* display: flex; */
+  position: absolute; }
+
 fieldset {
   border: 2px solid #008dff;
   border-radius: 7px;
@@ -220,6 +284,7 @@ input, textarea {
   margin: 0; }
 
 .flex-form-container {
+  position: relative;
   text-align: left;
   display: inline-flex;
   flex-wrap: wrap;
@@ -247,6 +312,29 @@ input, textarea {
   padding-top: 10px;
   padding-bottom: 10px; }
 
+.warning-message {
+  font-size: 0.65em;
+  padding: 2px 6px 1px 6px;
+  border-radius: 3px;
+  background: red;
+  color: white;
+  position: absolute;
+  right: 0px;
+  box-shadow: 1px 1px 3px #777; }
+
+.warning-message p {
+  margin: 0px; }
+
+.warning-message.name {
+  top: 34px; }
+
+.warning-message.email {
+  top: 105px; }
+
+.warning-message.name,
+.warning-message.email {
+  display: none; }
+
 span#email-format {
   width: 100%;
   text-align: right;
@@ -254,33 +342,32 @@ span#email-format {
 
 @media screen and (min-width: 480px) {
   .flex-form-container {
-    max-width: 436px; } }
+    max-width: 336px; } }
+@media screen and (min-width: 640px) {
+  .warning-message.name,
+  .warning-message.email {
+    right: -110px; }
+
+  .warning-message.name {
+    top: 63px; }
+
+  .warning-message.email {
+    top: 136px; } }
 @media screen and (min-width: 767px) {
   .flex-form-container label {
     flex: 0 120px; }
 
   .flex-form-container {
-    max-width: 456px; } }
-.badge-listing {
-  max-width: 1280px;
-  margin: 0 auto; }
+    max-width: 456px; }
 
-.badge-listing ul {
-  list-style: none;
-  padding-left: 0px;
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  .warning-message.name,
+  .warning-message.email {
+    right: -140px; }
 
-.badge-listing ul li {
-  flex: 0 120px;
-  margin: 10px; }
+  .warning-message.name {
+    top: 49px; }
 
-.badge-listing ul li img {
-  width: 70px; }
-
-.badge-listing p {
-  margin-top: 0px;
-  font-size: 0.75em; }
+  .warning-message.email {
+    top: 109px; } }
 
 /*# sourceMappingURL=style.css.map */

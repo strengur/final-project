@@ -1,0 +1,29 @@
+.projects-overview ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.projects-overview a {
+  text-decoration: none;
+}
+
+.projects-overview>ul>li {
+  flex: 1 300px;
+  background: wheat;
+  margin: 5px;
+}
+
+.projects-overview>ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.projects-overview {
+  background: #888;
+  /* width: 100%; */
+  top: 0;
+  margin: 10px;
+  border: 1px solid;
+  /* display: flex; */
+  position: absolute;
+}

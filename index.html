@@ -91,10 +91,35 @@
       <h1><span>{</span>sense<span>}</span></h1>
       <h3>delivers greater work</h3>
 
-      <div class="buttons sense center-text">
+      <div id="button-sense" class="buttons sense center-text">
         <a href="#">know more</a>
       </div>
     </div>
+
+    <div id="projects-overview" class="projects-overview">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="project">
+              <h4>responsive rallery</h4>
+              <p>the task for this project was to set up online image gallery. overview is in grid view setup and when image is clicked a light box is layed over the grid.</p>
+              <p>skillset used</p>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>jQuery / JavaScript</li>
+              </ul>
+            </div>
+          </a>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
   </section>
 
   <section id="s4" class="s-base center-text">
@@ -107,9 +132,11 @@
         <div class="flex-form-container">
           <label class="required" for="name">full name</label>
           <input type="text" id="name" name="full_name" placeholder="required" required>
+          <div class="warning-message name"><p>pleace fill out this field!</p></div>
 
-          <label class="required" for="mail">email address</label>
-          <input type="email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" aria-describedby="email-format" name="senders_email" placeholder="required" required>
+          <label class="required" for="email">email address</label>
+          <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" aria-describedby="email-format" name="senders_email" placeholder="required" required>
+          <div class="warning-message email"><p>pleace fill out this field!</p></div>
           <span id="email-format" class="help">format: email@yourhost.com</span>
 
           <label for="phone">phone number</label>
@@ -129,7 +156,7 @@
           <textarea id="comment" name="comments"></textarea>
         </div>
       </fieldset>
-      <button id="button-sense" type="submit">keep in touch</button>
+      <button id="button-touch" type="submit">keep in touch</button>
     </div>
   </section>
 

@@ -40,7 +40,17 @@ section#s4
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+}
+
+.s1-content,
+.s2-content,
+.s3-content,
+.s4-content {
   align-content: center;
+}
+
+.sense-message {
+  align-self: center;
 }
 
 #s1 {
@@ -93,6 +103,10 @@ section#s4
 
 #s4 h1 span {
   color: #008dff;
+}
+
+.s4-content {
+  margin: 0 20px;
 }
 
 #s1 h1 {
@@ -163,6 +177,16 @@ svg {
 
 .sense-message h3, .sense-message p {
     text-align: left;
+}
+
+.s3-content {
+  display: none;
+}
+
+@include mobile-landscape-mid {
+  .s4-content {
+    margin: auto;
+  }
 }
 
 @include tablets {

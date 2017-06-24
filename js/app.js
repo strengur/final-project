@@ -3,6 +3,9 @@ var $sectionOne = document.getElementById('s1');
 var $sectionFour = document.getElementById('s4-content');
 var $buttonArsenal = document.getElementById('button-arsenal');
 var $buttonSense = document.getElementById('button-sense');
+var $buttonTouch = document.getElementById('button-touch');
+var $nameTouch = document.getElementById('name');
+var $emailTouch = document.getElementById('email');
 
 // BEGIN: arsenal section interactivity when button 'know more' is clicked.
 function getBadges($arsenalButtonHTML) {
@@ -53,23 +56,63 @@ $buttonArsenal.addEventListener('click', function(e) {
 
 // END: arsenal section interactivity when button 'know more' is clicked.
 
-// BEGIN: touch section interactivity when button 'keep in touch' is clicked.
-
-
-
-$buttonSense.addEventListener('click', function() {
-  $('#s4-content').fadeOut(700, function() {
-    var $senseGreeting = '<div class="sense-message">';
-    $senseGreeting += '<h3>hi, steingrímur</h3>';
-    $senseGreeting += '<p>thank you so much for contacting me!<br>i will do my very best to reply to your inquiry as sharply as i can, no later than next business day.</p>';
-    $senseGreeting += '<p>have a great day!</p>';
-    $senseGreeting += '<p><i>sincerely,<br>steingrimur</i></p>';
-    $senseGreeting += '<div class="buttons close-touch center-text">';
-    $senseGreeting += '<a href="#">close</a>';
-    $senseGreeting += '</div>';
-    $senseGreeting += '</div>';
-    $('#s4-content').html($senseGreeting).delay(500).fadeIn(500);
-  });
+// BEGIN: sense section interactivity when button 'know more' is clicked.
+$buttonSense.addEventListener('click', function(e) {
+  e.preventDefault();
 });
+// END: sense section interactivity when button 'know more' is clicked.
+
+// BEGIN: touch section interactivity when button 'keep in touch' is clicked.
+function submitForm() {
+  var $contactName = $nameTouch.value.toLowerCase();
+  var $emailAddress = $emailTouch.value.toLowerCase();
+  var $warningName = $('.warning-message.name');
+  var $warningEmail = $('.warning-message.email');
+  if($contactName !== '' && $emailAddress !== '') {
+    $('#s4-content').fadeOut(700, function() {
+      var $senseGreeting = '<div class="sense-message">';
+      $senseGreeting += '<div>'
+      $senseGreeting += '<h3>hi ' + $contactName + '</h3>';
+      $senseGreeting += '<p>thank you so much for contacting me!<br>i will do my very best to reply to your inquiry as sharply as i can, no later than next business day.</p>';
+      $senseGreeting += '<p>have a great day!</p>';
+      $senseGreeting += '<p><i>sincerely,<br>steingrimur</i></p>';
+      $senseGreeting += '<div id="close-touch" class="buttons close-touch center-text">';
+      $senseGreeting += '<a href="#">close</a>';
+      $senseGreeting += '</div>';
+      $senseGreeting += '</div>';
+      $senseGreeting += '</div>';
+      $('#s4-content').html($senseGreeting).delay(300).fadeIn(500);
+      $closeTouchButton = document.getElementById('close-touch');
+      $closeTouchButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        $('#s4-content').delay(200).fadeOut(300, function() {
+          $('#s4-content').html($sectionFourContent).fadeIn();
+          $buttonTouch = document.getElementById('button-touch');
+          console.log($buttonTouch);
+        });
+      });
+    });
+
+  } else {
+    if($contactName === '') {
+      $warningName.fadeIn();
+    } else {
+      $warningName.fadeOut();
+    }
+    if($emailAddress === '') {
+      $warningEmail.fadeIn();
+    } else {
+      $warningEmail.fadeOut();
+    }
+  }
+}
+
+var $sectionFourContent = $sectionFour.innerHTML;
+$buttonTouch.addEventListener('click', function() {
+  submitForm();
+});
+
+
+
 
 // END: touch section interactivity when button 'keep in touch' is clicked.

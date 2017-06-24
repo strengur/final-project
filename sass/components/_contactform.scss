@@ -22,6 +22,7 @@ input, textarea {
 }
 
 .flex-form-container {
+  position: relative;
   text-align: left;
   display: inline-flex;
   flex-wrap: wrap;
@@ -60,6 +61,34 @@ input, textarea {
   padding-bottom: 10px;
 }
 
+.warning-message {
+  font-size: 0.65em;
+  padding: 2px 6px 1px 6px;
+  border-radius: 3px;
+  background: red;
+  color: white;
+  position: absolute;
+  right: 0px;
+  box-shadow: 1px 1px 3px #777;
+}
+
+.warning-message p {
+  margin: 0px;
+}
+
+.warning-message.name {
+  top: 34px;
+}
+
+.warning-message.email {
+  top: 105px;
+}
+
+.warning-message.name,
+.warning-message.email {
+  display: none;
+}
+
 span#email-format {
   width: 100%;
   text-align: right;
@@ -68,7 +97,22 @@ span#email-format {
 
 @include mobile-landscape-nrw {
   .flex-form-container {
-    max-width: 436px;
+    max-width: 336px;
+  }
+}
+
+@include mobile-landscape-norm {
+  .warning-message.name,
+  .warning-message.email {
+    right: -110px;
+  }
+
+  .warning-message.name {
+    top: 63px;
+  }
+
+  .warning-message.email {
+    top: 136px;
   }
 }
 
@@ -79,5 +123,18 @@ span#email-format {
 
   .flex-form-container {
     max-width: 456px;
+  }
+
+  .warning-message.name,
+  .warning-message.email {
+    right: -140px;
+  }
+
+  .warning-message.name {
+    top: 49px;
+  }
+
+  .warning-message.email {
+    top: 109px;
   }
 }
